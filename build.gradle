@@ -1,0 +1,27 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'findbugs'
+apply plugin: 'pmd'
+apply plugin: 'checkstyle'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'junit:junit:4.12'
+}
+
+checkstyle { 
+    ignoreFailures = true
+}
+
+findbugs {
+    ignoreFailures = true
+}
+
+pmd {
+    ignoreFailures = true
+}
